@@ -23,3 +23,15 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if (amigos.length == 0) {
+        alert("A lista de amigos está vazia!.");
+        return;
+    }
+
+    let sorteio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[sorteio];
+
+    document.getElementById("resultado").innerHTML = `<li>Seu amigo secreto é: ${amigoSorteado}</li>`;
+}
